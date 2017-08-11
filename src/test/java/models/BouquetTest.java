@@ -36,4 +36,12 @@ public class BouquetTest {
         Bouquet newFlower2 = newArrangement2();
         assertEquals(2, Bouquet.getAllFlowers().size());
     }
+
+    @Test
+    public void bouquetInstantiatesWithValue_True() throws Exception {
+        Bouquet.clearAllFlowers();
+        Bouquet newFlower = newArrangement();
+        assertEquals("buddy", newFlower.getFlower1());
+    }
+
 }
