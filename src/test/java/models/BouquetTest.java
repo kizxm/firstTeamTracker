@@ -41,7 +41,7 @@ public class BouquetTest {
     public void bouquetInstantiatesWithValue_True() throws Exception {
         Bouquet.clearAllFlowers();
         Bouquet newFlower = newArrangement();
-        assertEquals("buddy", newFlower.getFlower1());
+        assertEquals("rose", newFlower.getFlower1());
     }
 
 }
