@@ -34,6 +34,6 @@ public class BouquetTest {
         Bouquet.clearAllFlowers();
         Bouquet newFlower = newArrangement();
         Bouquet newFlower2 = newArrangement2();
-        assertEquals(4, Bouquet.getAllFlowers().size());
+        assertEquals(2, Bouquet.getAllFlowers().size());
     }
 }
