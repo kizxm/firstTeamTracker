@@ -22,7 +22,7 @@ public class BouquetTest {
     @Test
     public void instantiatesCorrectly() throws Exception {
         Bouquet newFlower = newArrangement();
-        assertEquals(false, newFlower instanceof Bouquet);
+        assertEquals(true, newFlower instanceof Bouquet);
     }
 
 }
