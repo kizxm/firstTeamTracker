@@ -44,4 +44,14 @@ public class BouquetTest {
         assertEquals("rose", newFlower.getFlower1());
     }
 
+    @Test
+    public void allFlowersContainsAllFlowers_True() throws Exception {
+        Bouquet newFlower = newArrangement();
+        Bouquet newFlower2 = newArrangement2();
+        assertTrue(Bouquet.getAll().contains(newFlower));
+        assertTrue(Bouquet.getAll().contains(newFlower2));
+    }
+
 }
+
+

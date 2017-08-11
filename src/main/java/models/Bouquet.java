@@ -26,6 +26,10 @@ public class Bouquet {
         allFlowers.clear();
     }
 
+    public static ArrayList<Bouquet> getAll() {
+        return allFlowers;
+    }
+
     /// getters ///
     public String getFlower1() {
         return flower1;
