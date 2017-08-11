@@ -20,6 +20,12 @@ public class Bouquet {
 
 
 
+
+
+    public static void clearAllFlowers() {
+        allFlowers.clear();
+    }
+
     /// getters ///
     public String getFlower1() {
         return flower1;

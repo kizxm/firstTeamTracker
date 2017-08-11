@@ -15,8 +15,12 @@ public class BouquetTest {
     public void tearDown() throws Exception {
     }
 
-    public Bouquet newArrangement(){
+    public Bouquet newArrangement() {
         return new Bouquet("rose", "lily", "daisy", "gerbera");
+    }
+
+    public Bouquet newArrangement2() {
+        return new Bouquet("sunflower", "dandelion", "poppy", "thistle");
     }
 
     @Test
@@ -25,4 +29,11 @@ public class BouquetTest {
         assertEquals(true, newFlower instanceof Bouquet);
     }
 
+    @Test
+    public void countsBouquetInstancesCorrectly() throws Exception {
+        Bouquet.clearAllFlowers();
+        Bouquet newFlower = newArrangement();
+        Bouquet newFlower2 = newArrangement2();
+        assertEquals(4, Bouquet.getAllFlowers().size());
+    }
 }
