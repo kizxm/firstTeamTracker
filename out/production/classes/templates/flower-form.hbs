@@ -1,0 +1,54 @@
+{{#partial "content"}}
+
+
+    {{#if editFlowers}}
+        <h1>Edit this Bouquet!</h1>
+        <form action="/flowers/{{editFlowers.id}}/update" method="post">
+            <div class="form-control">
+                <label for="flower1">New Flower:</label>
+                <input id="flower1" name="flower1" type="text" value="{{editFlowers.flower1}}">
+            </div>
+            <div class="form-control">
+                <label for="flower2">New Flower:</label>
+                <input id="flower2" name="flower2" type="text" value="{{editFlowers.flower2}}">
+            </div>
+            <div class="form-control">
+                <label for="flower3">New Flower:</label>
+                <input id="flower3" name="flower3" type="text" value="{{editFlowers.flower3}}">
+            </div>
+            <div class="form-control">
+                <label for="flower4">New Flower:</label>
+                <input id="flower4" name="flower4" type="text" value="{{editFlowers.flower4}}">
+            </div>
+            <button type="submit" class="btn btn-default">Edit Arrangement</button>
+        </form>
+    {{else}}
+
+        <h1>Add a Arrangement</h1>
+        <form action="/flowers/new" method="post">
+            <div class="form-control">
+                <label for="flower1">Choose a Main Flower for your Arrangement:</label>
+                <input id="flower1" name="flower1" type="text">
+            </div>
+            <div class="form-control">
+                <label for="flower2">Add a Secondary Flower to Your Bouquet:</label>
+                <input id="flower2" name="flower2" type="text">
+            </div>
+            <div class="form-control">
+                <label for="flower3">Add Another Flower:</label>
+                <input id="flower3" name="flower3" type="text">
+            </div>
+            <div class="form-control">
+                <label for="flower4">Add Another Flower:</label>
+                <input id="flower4" name="flower4" type="text">
+
+            </div>
+            <button type="submit" class="btn btn-default">Add new bouquet!</button>
+    {{/if}}
+
+    </form>
+
+
+{{/partial}}
+
+{{> layout.hbs}}
