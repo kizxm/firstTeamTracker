@@ -12,7 +12,11 @@
 
 _This website allows the user to enter in desired flowers in a form and return them as a list, (bouquet), to switch between pages it uses GET & POST methods in Java._
 
-![Alt text](../public/images/screenshot.png)
+![Alt text](../screenshot.png)
+
+
+_Video Avaliable as Well:_
+![Alt text](../movie.png)
 
 ## Setup/Installation Requirements
 ✿✿✿✿✿✿✿✿✿✿
