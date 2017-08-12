@@ -37,8 +37,7 @@ You will need Gradle installed on your device.
 | ------------- | ------------- | ------------- |
 |Edit the Previous Bouquet | (no change), (no change), Tulip, (no change)| Primary Flower: Daisy, Secondary Flower: Lily, Additional Flower: Tulip, Additional Flower: Sunflower|
 | ------------- | ------------- | ------------- |
-| View all Bouquets | Click to view all | Primary Flower: Daisy, Secondary Flower: Lily, Additional Flower: Tulip, Additional Flower: Sunflower --
- Primary Flower: Gerbera, Secondary Flower: Dandelion, Additional Flower: Thistle, Additional Flower: None
+| View all Bouquets | Click to view all | Primary Flower: Daisy, Secondary Flower: Lily, Additional Flower: Tulip, Additional Flower: Sunflower -- Primary Flower: Gerbera, Secondary Flower: Dandelion, Additional Flower: Thistle, Additional Flower: None
 
 ## Known Bugs
 ✿✿✿✿✿✿✿✿✿✿
