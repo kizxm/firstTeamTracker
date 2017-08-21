@@ -1,7 +1,7 @@
-# Bouquet Maker
+# Tech Conference Builder
 ✿✿✿✿✿✿✿✿✿✿✿
 
-#### Bouquet Maker August 11, 2017
+#### Tech Conference August 18, 2017
 ✿✿✿✿✿✿✿✿✿✿
 
 #### By Kira Loo
@@ -10,13 +10,8 @@
 ## Description
 ✿✿✿✿✿✿✿✿✿✿
 
-_This website allows the user to enter in desired flowers in a form and return them as a list, (bouquet), to switch between pages it uses GET & POST methods in Java._
-
-![Alt text](/screenshot.png)
-
-
-_Video Avaliable as Well:_
-[![Alt text](/movie.png)](https://youtu.be/3n3NYL9mZJk)
+_Updated Team Tracking/Tech Conference Building Website. Previously known as BouquetMaker, new and updated site will
+allow the user to create a team for a teach conference and add new members to the team._
 
 ## Setup/Installation Requirements
 ✿✿✿✿✿✿✿✿✿✿
@@ -33,11 +28,13 @@ You will need Gradle installed on your device.
 
 | ❀ Behavior      | ❀ Example Input      | ❀ Example Output       |
 | ------------- | ------------- | ------------- |
-|Enter in the type of Bouquet you'd like | Daisy, Lily, Rose, Sunflower | Primary Flower: Daisy, Secondary Flower: Lily, Additional Flower: Rose, Additional Flower: Sunflower|
+|Enter in your Team | Team name: First Team, Team Description: "Very cool team", First Team Member: Tiffany | Team Name: "First Team", Team Description "Very Cool Team", Members "Tiffany"|
 | ------------- | ------------- | ------------- |
-|Edit the Previous Bouquet | (no change), (no change), Tulip, (no change)| Primary Flower: Daisy, Secondary Flower: Lily, Additional Flower: Tulip, Additional Flower: Sunflower|
+|Edit the Previous Team Name | New Name: "First Team 2.0"| New Team Name: "First Team 2.0"|
 | ------------- | ------------- | ------------- |
-| View all Bouquets | Click to view all | Primary Flower: Daisy, Secondary Flower: Lily, Additional Flower: Tulip, Additional Flower: Sunflower -- Primary Flower: Gerbera, Secondary Flower: Dandelion, Additional Flower: Thistle, Additional Flower: None
+|View all Teams | Click to view all | All Teams Listed |
+| ------------- | ------------- | ------------- |
+|Add a Team Member| New Member: "Sara"| Team Members: "Tiffany", "Sara"|
 
 ## Known Bugs
 ✿✿✿✿✿✿✿✿✿✿
