@@ -19,17 +19,21 @@
     {{else}}
         <h1>Add a new Team!</h1>
 
-        <h2>Please enter a team name, description, and name of team leader</h2>
-        <h3>More team members can be added later</h3>
+        <h3><u>Add your Team Name & a Description:</u></h3>
 
         <form action="/flowers/new" method="post">
+            <br>
             <label for="flower1">Team Name</label>
             <input id="flower1" name="flower1" type="text">
+            <br>
             <label for="flower2">Team Description</label>
             <input id="flower2" name="flower2" type="text">
-            <label for="teamHead">Team Leader Name</label>
+            <br>
+            <label for="teamHead">First Team Member:</label>
             <input id="teamHead" name="teamHead" type="text">
-
+            <br>
+            <img src="../images/400.gif">
+            <br>
             <button type="submit" class="btn btn-default">Create a New Team</button>
         </form>
     {{/if}}
