@@ -16,11 +16,11 @@ public class BouquetTest {
     }
 
     public Bouquet newArrangement() {
-        return new Bouquet("rose", "lily", "daisy", "gerbera");
+        return new Bouquet("rose", "lily");
     }
 
     public Bouquet newArrangement2() {
-        return new Bouquet("sunflower", "dandelion", "poppy", "thistle");
+        return new Bouquet("sunflower", "dandelion");
     }
 
     @Test
@@ -51,15 +51,15 @@ public class BouquetTest {
         assertTrue(Bouquet.getAll().contains(newFlower));
         assertTrue(Bouquet.getAll().contains(newFlower2));
     }
-    @Test
-    public void updateChangesPostContent() throws Exception {
-        Bouquet newFlower = newArrangement();
-        String oldContent = newFlower.getFlower1();
-        int formerId = newFlower.getId();
-        newFlower.update("tulip", "willow", "dandelion", "none");
-        assertEquals(formerId, newFlower.getId());
-        assertNotEquals(oldContent, newFlower.getFlower1());
-    }
+//    @Test
+//    public void updateChangesPostContent() throws Exception {
+//        Bouquet newFlower = newArrangement();
+//        String oldContent = newFlower.getFlower1();
+//        int formerId = newFlower.getId();
+//        newFlower.update("tulip", "willow", "dandelion", "none");
+//        assertEquals(formerId, newFlower.getId());
+//        assertNotEquals(oldContent, newFlower.getFlower1());
+//    } this update functionality has been removed
 }
 
 

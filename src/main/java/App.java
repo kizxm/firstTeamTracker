@@ -1,6 +1,8 @@
 import models.Bouquet;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -19,6 +21,12 @@ public class App {
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/flowers", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            ArrayList<Bouquet> bouquets = Bouquet.getAllFlowers();
+            model.put("bouquet", bouquets);
+            return new ModelAndView(model, "flower-details.hbs");
+        }, new HandlebarsTemplateEngine());
 
         get("/flowers/new", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
@@ -27,11 +35,13 @@ public class App {
 
         post("/flowers/new", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
+            ArrayList<Bouquet> bouquets = Bouquet.getAllFlowers();
             String flower1 = request.queryParams("flower1");
             String flower2 = request.queryParams("flower2");
-            String flower3 = request.queryParams("flower3");
-            String flower4 = request.queryParams("flower4");
-            Bouquet newFlower = new Bouquet(flower1, flower2, flower3, flower4);
+            String teamHead = request.queryParams("teamHead");
+            Bouquet newFlower = new Bouquet(flower1, flower2);
+            newFlower.addMember(teamHead);
+            model.put("bouquet", newFlower);
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
@@ -53,16 +63,31 @@ public class App {
 
         post("/flowers/:id/update", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
-            String flower1 = req.queryParams("flower1");
-            String flower2 = req.queryParams("flower2");
-            String flower3 = req.queryParams("flower3");
-            String flower4 = req.queryParams("flower4");
             int idOfPostToEdit = Integer.parseInt(req.params("id"));
             Bouquet editFlowers = Bouquet.findById(idOfPostToEdit);
-            editFlowers.update(flower1, flower2, flower3, flower4);
-            return new ModelAndView(model, "index.hbs");
+            String flower1 = req.queryParams("flower1");
+            editFlowers.setFlower1(flower1);
+            model.put("newFlower1", editFlowers);
+            return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/flowers/:id/add-member", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            int idOfPostToEdit = Integer.parseInt(req.params("id"));
+            Bouquet editFlowers = Bouquet.findById(idOfPostToEdit);
+            model.put("addMember", editFlowers);
+            return new ModelAndView(model, "flower-form.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        post("/flowers/:id/add-member", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            int idOfPostToEdit = Integer.parseInt(request.params("id"));
+            Bouquet editFlowers = Bouquet.findById(idOfPostToEdit);
+            String member = request.queryParams("member");
+            editFlowers.addMember(member);
+            model.put("addMember", editFlowers);
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
 
     }
 }

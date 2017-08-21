@@ -1,0 +1,33 @@
+{{#partial "content"}}
+
+    {{#if newFlower1}}
+        <h1>TEAM NAME UPDATED!</h1>
+        <p>Team Name: {{ newFlower1.flower1 }}</p>
+
+    {{else if addMember}}
+        <h1>NEW MEMBER HAS BEEN ADDED!</h1>
+        <p>Team Name: {{ addMember.flower1 }}</p>
+        <p>Team Description: {{ addMember.flower2 }}</p>
+        <p>Team Members:</p>
+        <ul>
+            {{#each addMember.flower3}}
+                <li>{{ this }}</li>
+            {{/each}}
+        </ul>
+    {{else}}
+        <h1>Team Added!</h1>
+
+        <h2>Team Details:</h2>
+        <p>Team Name: {{ bouquet.flower1}}</p>
+        <p>Team Description: {{ bouquet.flower2 }}</p>
+        <p>Team Members:</p>
+        <ul>
+            {{#each bouquet.flower3}}
+                <li>{{ this }}</li>
+            {{/each}}
+        </ul>
+    {{/if}}
+
+{{/partial}}
+
+{{> layout.hbs}}
