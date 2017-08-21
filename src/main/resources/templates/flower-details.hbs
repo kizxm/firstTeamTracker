@@ -1,18 +1,22 @@
 {{#partial "content"}}
     {{#if bouquet}}
-        <h1>Current Teams:</h1>
+        <h1><u>Current Teams:</u></h1>
         {{#each bouquet }}
-            <h3>{{ flower1 }}</h3>
-            <p>{{ flower2 }}</p>
-            <p>Members:</p>
+            <br>
+            <u> Team Name:</u> {{ flower1 }}
+            <br>
+            <u> Description:</u> {{ flower2 }}
+            <p><u>Members:</u></p>
             <ul>
                 {{#each flower3}}
                     <li>{{ this }}</li>
                 {{/each}}
             </ul>
+            <br>
+            <br>
             <p><a href="flowers/{{id}}/update">Edit Name</a></p>
             <p><a href="flowers/{{id}}/add-member">Add Member</a></p>
-            <p>---------------------------</p>
+            
         {{/each}}
     {{else if bouquet}}
         <h2>Team Details for: {{ bouquet.name }}</h2>
